@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Now</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <h1>Weather Now</h1>
+                <p>Real-time weather information</p>
+            </div>
+
+            <div class="header-icon">
+                🌤️
+            </div>
+
+        </header>
+
+
+        <!-- Search -->
+        <div class="search-section">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Search city..."
+            >
+
+            <button onclick="getWeather()">
+                🔍 Search
+            </button>
+
+        </div>
+
+
+        <!-- Error / Loading -->
+        <p id="errorMessage"></p>
+
+
+        <!-- Weather Content -->
+        <main id="weatherContent" class="weather-content">
+
+
+            <!-- Location -->
+            <section class="location">
+
+                <p class="small-title">
+                    CURRENT WEATHER
+                </p>
+
+                <h2 id="cityName">
+                    --
+                </h2>
+
+                <p id="country">
+                    --
+                </p>
+
+                <p id="dateTime">
+                    --
+                </p>
+
+            </section>
+
+
+            <!-- Main Weather -->
+            <section class="main-weather">
+
+                <div class="weather-icon" id="weatherIcon">
+                    🌤️
+                </div>
+
+                <div>
+
+                    <h3 id="temperature">
+                        --°C
+                    </h3>
+
+                    <p id="description">
+                        --
+                    </p>
+
+                    <p class="feels">
+                        Feels like
+                        <strong id="feelsLike">--°C</strong>
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Weather Details -->
+            <section class="details-grid">
+
+
+                <div class="detail-card">
+
+                    <div class="detail-icon">
+                        💧
+                    </div>
+
+                    <div>
+                        <p>Humidity</p>
+                        <strong id="humidity">--%</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="detail-card">
+
+                    <div class="detail-icon">
+                        💨
+                    </div>
+
+                    <div>
+                        <p>Wind Speed</p>
+                        <strong id="windSpeed">-- km/h</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="detail-card">
+
+                    <div class="detail-icon">
+                        👁️
+                    </div>
+
+                    <div>
+                        <p>Visibility</p>
+                        <strong id="visibility">-- km</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="detail-card">
+
+                    <div class="detail-icon">
+                        🌡️
+                    </div>
+
+                    <div>
+                        <p>Pressure</p>
+                        <strong id="pressure">-- hPa</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Sunrise / Sunset -->
+            <section class="sun-section">
+
+                <div class="sun-card">
+
+                    <span>🌅</span>
+
+                    <div>
+                        <p>Sunrise</p>
+                        <strong id="sunrise">--</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="sun-card">
+
+                    <span>🌇</span>
+
+                    <div>
+                        <p>Sunset</p>
+                        <strong id="sunset">--</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <p>
+                Weather data powered by Open-Meteo
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
